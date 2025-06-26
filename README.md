@@ -26,7 +26,7 @@ Un sistema completo per la gestione di menu, ordini e fatturazione per ristorant
 ### Installazione
 1. **Scarica** tutti i file del progetto
 2. **Posiziona** i file in una cartella web-accessibile
-3. **Apri** `cucina_bar.html` nel browser per iniziare
+3. **Apri** `index.html` nel browser per iniziare
 
 ### Struttura File
 ```
