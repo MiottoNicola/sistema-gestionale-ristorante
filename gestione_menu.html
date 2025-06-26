@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Pannello Admin - Gestione Menu</title>
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="w3-light-grey">
+    <div class="w3-white w3-padding-large w3-round-large">
+        <h2 class="w3-center w3-text-teal">Pannello Admin - Gestione Menu</h2>
+        
+        <div class="admin-section w3-border w3-round">
+            <h3 class="w3-text-teal">Informazioni Esercizio</h3>
+            <label>Nome Esercizio: <span class="w3-text-grey">(massimo 100 caratteri)</span></label>
+            <input type="text" id="nomeRistorante" class="w3-input w3-border w3-round w3-margin-bottom" maxlength="100">
+            <label>Informazioni: <span class="w3-text-grey">(massimo 200 caratteri)</span></label>
+            <textarea id="indirizzoRistorante" class="w3-input w3-border w3-round" rows="3" maxlength="200"></textarea>
+        </div>
+
+        <div class="admin-section w3-border w3-round">
+            <h3 class="w3-text-teal">Gestione Menu</h3>
+            <div id="categorieContainer"></div>
+            <button class="w3-button btn-aggiungi w3-round" onclick="aggiungiCategoria()">+ Aggiungi Categoria</button>
+        </div>
+
+        <div class="w3-center w3-margin-top">
+            <button class="w3-button btn-salva w3-round-large w3-margin" onclick="salvaMenu()">💾 Salva Menu</button>
+            <button class="w3-button btn-carica w3-round-large w3-margin" onclick="caricaMenu()">🔄 Ricarica Menu</button>
+            <a href="cucina_bar.html" class="w3-button btn-visualizza w3-round-large w3-margin">👁️ Visualizza Menu</a>
+        </div>
+    </div>
+
+    <!-- Modal per modifica prodotto -->
+    <div id="prodottoModal" class="modal">
+        <div class="modal-content">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <h3 id="modalTitolo" class="w3-text-teal" style="margin: 0;">Modifica Prodotto</h3>
+                <button class="w3-button btn-chiudi" onclick="chiudiModal()">&times;</button>
+            </div>
+
+            <label>Nome Prodotto: <span class="w3-text-grey">(massimo 100 caratteri)</span></label>
+            <input type="text" id="modalNome" class="w3-input w3-border w3-round w3-margin-bottom" maxlength="100">
+
+            <label>Descrizione: <span class="w3-text-grey">(massimo 200 caratteri)</span></label>
+            <textarea id="modalDescrizione" class="w3-input w3-border w3-round w3-margin-bottom" rows="3" maxlength="200"></textarea>
+
+            <label>Prezzo (€):</label>
+            <input type="number" step="0.01" id="modalPrezzo" class="w3-input w3-border w3-round w3-margin-bottom">
+            
+            <label>Tipo:</label>
+            <select id="modalTipo" class="w3-select w3-border w3-round w3-margin-bottom">
+                <option value="cucina">Cucina</option>
+                <option value="bar">Bar</option>
+            </select>
+            
+            <label>Allergeni:</label>
+            <div class="allergeni-container" id="allergeniContainer">
+                <div class="allergene-checkbox">
+                    <input type="checkbox" id="glutine" value="glutine">
+                    <label for="glutine">Glutine</label>
+                </div>
+                <div class="allergene-checkbox">
+                    <input type="checkbox" id="latte" value="latte">
+                    <label for="latte">Latte</label>
+                </div>
+                <div class="allergene-checkbox">
+                    <input type="checkbox" id="uova" value="uova">
+                    <label for="uova">Uova</label>
+                </div>
+                <div class="allergene-checkbox">
+                    <input type="checkbox" id="pesce" value="pesce">
+                    <label for="pesce">Pesce</label>
+                </div>
+                <div class="allergene-checkbox">
+                    <input type="checkbox" id="crostacei" value="crostacei">
+                    <label for="crostacei">Crostacei</label>
+                </div>
+                <div class="allergene-checkbox">
+                    <input type="checkbox" id="molluschi" value="molluschi">
+                    <label for="molluschi">Molluschi</label>
+                </div>
+                <div class="allergene-checkbox">
+                    <input type="checkbox" id="frutta_guscio" value="frutta a guscio">
+                    <label for="frutta_guscio">Frutta a guscio</label>
+                </div>
+                <div class="allergene-checkbox">
+                    <input type="checkbox" id="arachidi" value="arachidi">
+                    <label for="arachidi">Arachidi</label>
+                </div>
+                <div class="allergene-checkbox">
+                    <input type="checkbox" id="soia" value="soia">
+                    <label for="soia">Soia</label>
+                </div>
+                <div class="allergene-checkbox">
+                    <input type="checkbox" id="sesamo" value="sesamo">
+                    <label for="sesamo">Sesamo</label>
+                </div>
+                <div class="allergene-checkbox">
+                    <input type="checkbox" id="solfiti" value="solfiti">
+                    <label for="solfiti">Solfiti</label>
+                </div>
+            </div>
+            
+            <div class="w3-margin-top">
+                <button class="w3-button btn-salva w3-round" onclick="salvaProdotto()">💾 Salva</button>
+                <button class="w3-button w3-grey w3-round" onclick="chiudiModal()" style="background-color: #757575 !important; color: white !important;">Annulla</button>
+            </div>
+        </div>
+    </div>
+    <footer class="w3-container w3-teal w3-margin-top w3-round-large">
+        <p class="w3-center">
+            © 2025 Orders-Receipts System - Pannello Admin<br>
+            Gestione menu e prodotti per il tuo ristorante.
+        </p>
+        <p class="w3-center" style="font-size: 0.8em;">
+            Sviluppato da <a href="https://github.com/MiottoNicola" target="_blank">Nicola Miotto</a>, Tutti i diritti riservati<br>
+            Versione 1.0.0 - 06/2025
+        </p>
+    </footer>
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+{
+  "ristorante": {
+    "nome": "Ristorante Bella Tavola",
+    "indirizzo": "Via Roma 123\n00100 Roma\nTel: 06 12345678"
+  },
+  "categorie": [
+    {
+      "nome": "Antipasti",
+      "sottocategorie": [
+        {
+          "nome": "Carne",
+          "items": [
+            {
+              "nome": "Bruschette miste",
+              "descrizione": "Bruschette con pomodoro, basilico e mozzarella",
+              "prezzo": 6,
+              "tipo": "cucina",
+              "allergeni": [
+                "glutine",
+                "latte"
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Pesce",
+          "items": [
+            {
+              "nome": "Cocktail di gamberi",
+              "descrizione": "Gamberi freschi serviti con salsa rosa",
+              "prezzo": 9,
+              "tipo": "cucina",
+              "allergeni": [
+                "crostacei",
+                "uova"
+              ]
+            },
+            {
+              "nome": "spaghetti bussare con colata di calamaro fritto",
+              "descrizione": "Spaghetti con calamari fritti e salsa speciale",
+              "prezzo": 20,
+              "tipo": "cucina",
+              "allergeni": [
+                "glutine",
+                "molluschi",
+                "uova"
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "vegano",
+          "items": [
+            {
+              "nome": "erba",
+              "descrizione": "",
+              "prezzo": 0,
+              "tipo": "cucina",
+              "allergeni": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Primi Piatti",
+      "sottocategorie": [
+        {
+          "nome": "Carne",
+          "items": [
+            {
+              "nome": "Lasagna",
+              "descrizione": "Lasagna della casa con ragù di carne e besciamella",
+              "prezzo": 12,
+              "tipo": "cucina",
+              "allergeni": [
+                "glutine",
+                "latte",
+                "uova"
+              ]
+            },
+            {
+              "nome": "Risotto ai funghi",
+              "descrizione": "Risotto cremoso con funghi porcini",
+              "prezzo": 11.5,
+              "tipo": "cucina",
+              "allergeni": [
+                "latte"
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Pesce",
+          "items": [
+            {
+              "nome": "Linguine allo scoglio",
+              "descrizione": "Linguine con frutti di mare freschi",
+              "prezzo": 13,
+              "tipo": "cucina",
+              "allergeni": [
+                "glutine",
+                "molluschi",
+                "crostacei"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Secondi Piatti",
+      "sottocategorie": [
+        {
+          "nome": "Carne",
+          "items": [
+            {
+              "nome": "Tagliata di manzo",
+              "descrizione": "Tagliata di manzo con rucola e grana",
+              "prezzo": 18,
+              "tipo": "cucina",
+              "allergeni": [
+                "latte"
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Pesce",
+          "items": [
+            {
+              "nome": "Frittura mista di pesce",
+              "descrizione": "Frittura di pesce fresco dell'Adriatico",
+              "prezzo": 17,
+              "tipo": "cucina",
+              "allergeni": [
+                "pesce",
+                "glutine"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Extra",
+      "sottocategorie": [
+        {
+          "nome": "",
+          "items": [
+            {
+              "nome": "Pane e coperto",
+              "descrizione": "Pane fatto in casa con olio extravergine",
+              "prezzo": 2,
+              "tipo": "cucina",
+              "allergeni": [
+                "glutine"
+              ]
+            },
+            {
+              "nome": "Contorno di patate",
+              "descrizione": "Patate al forno con rosmarino",
+              "prezzo": 3,
+              "tipo": "cucina",
+              "allergeni": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Bibite",
+      "sottocategorie": [
+        {
+          "nome": "",
+          "items": [
+            {
+              "nome": "Acqua naturale 0.5L",
+              "descrizione": "Acqua minerale naturale",
+              "prezzo": 1.5,
+              "tipo": "bar",
+              "allergeni": []
+            },
+            {
+              "nome": "Coca-Cola 33cl",
+              "descrizione": "Coca-Cola in lattina",
+              "prezzo": 2.5,
+              "tipo": "bar",
+              "allergeni": []
+            },
+            {
+              "nome": "Vino della casa (bicchiere)",
+              "descrizione": "Vino rosso o bianco della casa",
+              "prezzo": 3,
+              "tipo": "bar",
+              "allergeni": [
+                "solfiti"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

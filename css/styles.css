@@ -1,0 +1,256 @@
+/* Stili comuni per tutte le pagine */
+
+body {
+    margin: auto;
+    padding: 20px;
+}
+
+/* Stili per tutti i pulsanti */
+.w3-button {
+    border-radius: 25px !important;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 12px 24px !important;
+}
+
+.w3-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-small {
+    padding: 8px 16px !important;
+    margin: 0 5px;
+    border-radius: 20px !important;
+    font-size: 0.9em;
+}
+
+/* Pulsanti colorati */
+.btn-modifica {
+    background-color: #ff9800 !important;
+    color: white !important;
+}
+
+.btn-modifica:hover {
+    background-color: #f57c00 !important;
+}
+
+.btn-rimuovi {
+    background-color: #f44336 !important;
+    color: white !important;
+}
+
+.btn-rimuovi:hover {
+    background-color: #d32f2f !important;
+}
+
+.btn-aggiungi {
+    background-color: #4caf50 !important;
+    color: white !important;
+}
+
+.btn-aggiungi:hover {
+    background-color: #388e3c !important;
+}
+
+.btn-azzurro {
+    background-color: #2196f3 !important;
+    color: white !important;
+}
+
+.btn-azzurro:hover {
+    background-color: #1976d2 !important;
+}
+
+.btn-salva {
+    background-color: #009688 !important;
+    color: white !important;
+    padding: 12px 24px !important;
+    font-size: 1.1em !important;
+}
+
+.btn-salva:hover {
+    background-color: #00796b !important;
+}
+
+.btn-carica {
+    background-color: #2196f3 !important;
+    color: white !important;
+    padding: 12px 24px !important;
+    font-size: 1.1em !important;
+}
+
+.btn-carica:hover {
+    background-color: #1976d2 !important;
+}
+
+.btn-visualizza {
+    background-color: #ff9800 !important;
+    color: white !important;
+    padding: 12px 24px !important;
+    font-size: 1.1em !important;
+    text-decoration: none !important;
+}
+
+.btn-visualizza:hover {
+    background-color: #f57c00 !important;
+}
+
+.btn-chiudi {
+    background-color: #f44336 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    width: 35px !important;
+    height: 35px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.btn-chiudi:hover {
+    background-color: #d32f2f !important;
+    transform: rotate(90deg);
+}
+
+/* Input e select */
+.w3-input, .w3-select, textarea {
+    border-radius: 10px !important;
+    border: 2px solid #ddd !important;
+    transition: border-color 0.3s ease;
+}
+
+.w3-input:focus, .w3-select:focus, textarea:focus {
+    border-color: #009688 !important;
+    box-shadow: 0 0 10px rgba(0, 150, 136, 0.2) !important;
+}
+
+/* Card e modal */
+.w3-card, .modal-content {
+    border-radius: 15px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+.w3-tag {
+    border-radius: 15px !important;
+    padding: 4px 12px !important;
+}
+
+/* Allergeni */
+.allergeni {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.allergene {
+    background-color: #ffeb3b;
+    color: #333;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 500;
+    border: 1px solid #ffc107;
+}
+
+.allergene.importante {
+    background-color: #f44336;
+    color: white;
+    border-color: #d32f2f;
+}
+
+.allergene-tag {
+    background: #ffeb3b;
+    color: #333;
+    padding: 2px 6px;
+    border-radius: 15px !important;
+    font-size: 0.8em;
+}
+
+/* Modalità scura */
+.dark-mode {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .w3-white {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .w3-input, .dark-mode .w3-select, .dark-mode textarea {
+    background-color: #3d3d3d !important;
+    color: #ffffff !important;
+    border-color: #555 !important;
+}
+
+.dark-mode .menu-item {
+    background: rgba(45, 45, 45, 0.8) !important;
+    border-bottom-color: #555 !important;
+}
+
+.dark-mode .categoria {
+    color: #4dd0e1 !important;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    border-radius: 50% !important;
+    width: 50px !important;
+    height: 50px !important;
+}
+
+/* Stili per notifiche personalizzate */
+.notifica {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Miglioramenti per i modal */
+.modal-overlay {
+    backdrop-filter: blur(4px);
+    transition: backdrop-filter 0.3s ease;
+}
+
+/* Responsive per le notifiche */
+@media (max-width: 480px) {
+    .notifica {
+        right: 10px !important;
+        left: 10px !important;
+        min-width: auto !important;
+        max-width: none !important;
+        transform: translateY(-100px) !important;
+    }
+    
+    .notifica.show {
+        transform: translateY(0) !important;
+    }
+}
+
+/* Animazioni fluide per i totali */
+.totale-highlight {
+    background: linear-gradient(45deg, #4caf50, #8bc34a);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Stili per i pulsanti del modal nuovo ordine */
+@media (max-width: 768px) {
+    .modal div[style*="display: flex"] {
+        flex-direction: column !important;
+        align-items: center;
+    }
+    
+    .modal button {
+        width: 100% !important;
+        max-width: 280px;
+        margin: 4px 0 !important;
+    }
+}
