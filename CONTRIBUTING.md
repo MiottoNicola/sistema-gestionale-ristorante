@@ -51,7 +51,7 @@ Grazie per l'interesse nel contribuire al progetto! 🎉
 - Testa **localStorage** in diversi scenari
 
 ### Checklist Pre-Pull Request
-- [] Codice funziona correttamente
+- [ ] Codice funziona correttamente
 - [ ] Nessun errore console
 - [ ] Compatibilità cross-browser
 - [ ] Documentazione aggiornata
